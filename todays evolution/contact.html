@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        header{
+          
+          text-align: center;
+          padding: 30px;
+          margin: 30px;
+          background-color:green;
+        }
+ 
+        main{
+         padding: 100px;
+         margin: 50px;
+         background-color: blue;
+        }
+        footer{
+         margin: 20px;
+         padding: 20px;
+         background-color: pink;
+        }
+ 
+     </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" style="margin-right: 10px;"><button>Home</button></a>
+        <a href="destination.html" style="margin-right: 10px;"><button>Destination</button></a>
+        <a href="gallery.html" style="margin-right: 10px;"><button>Gallery</button></a>
+        <a href="contact.html" style="margin-right: 10px;"><button>Contact Details</button></a>
+    </header>
+    <main>
+    <form>
+        <label >Name:</label><input id="name"><br><br>
+        <label >Email:</label><input id="email"><br><br>
+        
+        <label >Phone number:</label><input id="number"><br><br>
+        <label >Message:</label><input id="message"><br><br>
+       
+    </form>
+    <button id="sub">Submit</button>
+    </main>
+    <footer id="fu">
+       
+        
+    </footer>
+</body>
+</html>
+<script>
+    email=getElementById('email')
+    name=getElementById('name')
+    number=getElementById('number')
+    mes=getElementById('message')
+    sub=getElementById('sub')
+    fu=getElementById('fu')
+    sub.addEventListener('click',()=>{
+    const formData={
+        Name:name.value,
+        Email:email.value,
+        Number:number.value,
+        Message:mes
+    }
+    function display(formData){
+        a=
+        JSON.parse(localStorage.getItem('formData'))||[]
+    }
+    a.push(formData)
+
+    display(formData)
+    li=document.createDocumentFragment('li')
+fu.appendChild(li)
+})
+</script>
+
+
+
+
